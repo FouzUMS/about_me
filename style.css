@@ -1,0 +1,105 @@
+/* GLOBAL EARTH TONES OVERRIDE */
+body {
+    background-color: #E8E4C9; /* Beige Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Tahoma", sans-serif;
+}
+
+.desktop {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* WINDOW STYLING */
+.window {
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+}
+
+/* Title Bar - Green */
+.title-bar {
+    background: linear-gradient(90deg, #556b2f, #8fbc8f); /* Dark Olive Green */
+}
+
+/* Window Body - Light Beige/Tan */
+.window-body {
+    background-color: #F5F5DC; 
+    min-height: 400px;
+}
+
+/* Tabs - Brown/Beige integration */
+menu[role="tablist"] {
+    margin-bottom: 10px;
+}
+
+/* Styling the Text Content */
+h3, h4 {
+    color: #3e2723; /* Dark Coffee Brown */
+    margin-bottom: 5px;
+}
+
+p, li {
+    color: #4a4a4a;
+    line-height: 1.5;
+}
+
+/* HEADSHOT */
+.profile-pic-frame {
+    border: 2px solid #8b4513;
+    padding: 3px;
+    width: 156px;
+    background: #fff;
+    margin-bottom: 15px;
+}
+
+.headshot {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+/* PROJECT BOXES */
+fieldset {
+    border: 2px solid #8b4513; /* Brown border */
+    background: #fff8dc; /* Cornsilk */
+    margin-bottom: 15px;
+}
+
+legend {
+    background: #556b2f;
+    color: white;
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+/* CAROUSEL */
+.carousel-container {
+    text-align: center;
+    background: #333;
+    padding: 10px;
+    border: 2px inset #fff;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    border: 1px solid #fff;
+}
+
+.carousel-slide p {
+    color: white;
+    margin-top: 5px;
+}
+
+.carousel-controls {
+    margin-top: 10px;
+}
+
+/* BUTTON OVERRIDES (To match Earth Tones) */
+button {
+    color: #3e2723;
+}

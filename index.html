@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fouz.exe</title>
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="desktop">
+        
+        <div class="window main-window">
+            <div class="title-bar">
+                <div class="title-bar-text">Fouz_Portfolio_2025.exe</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            
+            <div class="window-body">
+                <menu role="tablist">
+                    <button aria-selected="true" aria-controls="tab-home" onclick="switchTab(event, 'tab-home')">Home</button>
+                    <button aria-controls="tab-work" onclick="switchTab(event, 'tab-work')">Experience</button>
+                    <button aria-controls="tab-projects" onclick="switchTab(event, 'tab-projects')">Projects</button>
+                    <button aria-controls="tab-photo" onclick="switchTab(event, 'tab-photo')">Photography</button>
+                    <button aria-controls="tab-blog" onclick="switchTab(event, 'tab-blog')">Blog</button>
+                </menu>
+
+                <article role="tabpanel" id="tab-home">
+                    <div class="content-wrapper">
+                        <div class="profile-pic-frame">
+                            <img src="https://placehold.co/150x150/556b2f/FFF?text=Headshot" alt="Headshot" class="headshot">
+                        </div>
+                        <h3>About Me</h3>
+                        <p>Welcome. I am a final-year student at the Telfer School of Management focused on the intersection of IT governance and business alignment.</p>
+                        <p>I don't just bridge gaps; I build the infrastructure that eliminates them.</p>
+                    </div>
+                </article>
+
+                <article role="tabpanel" id="tab-work" hidden>
+                    <h3>Work History</h3>
+                    <div class="job-entry">
+                        <h4>[Role Title] @ [Company Name]</h4>
+                        <small>Dates of Employment</small>
+                        <p class="summary">
+                            [Insert Resume Summary Here: e.g., Led the digital transformation initiative for the department, resulting in a 20% increase in workflow efficiency. Managed stakeholder expectations and delivered key performance reports directly to senior management.]
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="job-entry">
+                        <h4>[Role Title] @ [Company Name]</h4>
+                        <small>Dates of Employment</small>
+                        <p class="summary">
+                            [Insert Resume Summary Here: e.g., Conducted rigorous data analysis to support policy changes. Collaborated with cross-functional teams to ensure compliance with federal privacy standards.]
+                        </p>
+                    </div>
+                </article>
+
+                <article role="tabpanel" id="tab-projects" hidden>
+                    <h3>Academic & Professional Projects</h3>
+                    
+                    <fieldset>
+                        <legend>Cloud Computing & Market Trends</legend>
+                        <p><strong>Context:</strong> ADM4378 Capstone</p>
+                        <p>Analyzed backend technologies and current market trends in cloud computing. Delivered a comprehensive assessment of cloud architecture viability for enterprise scaling.</p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Public Institution Digital Strategy</legend>
+                        <p><strong>Context:</strong> IT-Business Alignment Report</p>
+                        <p>Prepared a strategic report and presentation evaluating a public institution's digital maturity. Critiqued their current IT alignment with core business areas and proposed a roadmap for optimized governance.</p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>[Resume Project Title]</legend>
+                        <p>[Summary of contribution and lessons learned regarding this project.]</p>
+                    </fieldset>
+                </article>
+
+                <article role="tabpanel" id="tab-photo" hidden>
+                    <h3>Visual Catalogue</h3>
+                    <div class="carousel-container">
+                        <div class="carousel-slide active-slide">
+                            <img src="https://placehold.co/600x400/8b4513/FFF?text=Photo+1" alt="Photo 1">
+                            <p>Caption: Street Photography</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://placehold.co/600x400/556b2f/FFF?text=Photo+2" alt="Photo 2">
+                            <p>Caption: Landscape</p>
+                        </div>
+                        <div class="carousel-controls">
+                            <button onclick="prevSlide()">Previous</button>
+                            <button onclick="nextSlide()">Next</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article role="tabpanel" id="tab-blog" hidden>
+                    <h3>Observations & Links</h3>
+                    <ul class="tree-view">
+                        <li><a href="#" target="_blank">📄 The State of Cloud Governance in 2025</a></li>
+                        <li><a href="#" target="_blank">📄 Why IT Alignment Fails in the Public Sector</a></li>
+                        <li><a href="#" target="_blank">🔗 Interesting Link: Retro Web Design</a></li>
+                        </ul>
+                </article>
+
+            </div>
+            
+            <div class="status-bar">
+                <p class="status-bar-field">Logged in as: Guest</p>
+                <p class="status-bar-field">CPU Usage: 5%</p>
+                <p class="status-bar-field">Ottawa, ON</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab Logic
+        function switchTab(event, tabId) {
+            const tabs = document.querySelectorAll('menu button');
+            const panels = document.querySelectorAll('article[role="tabpanel"]');
+            
+            tabs.forEach(tab => tab.setAttribute('aria-selected', 'false'));
+            panels.forEach(panel => panel.hidden = true);
+            
+            event.target.setAttribute('aria-selected', 'true');
+            document.getElementById(tabId).hidden = false;
+        }
+
+        // Simple Carousel Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        
+        function showSlide(n) {
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[n].style.display = 'block';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Init Carousel
+        showSlide(0);
+    </script>
+</body>
+</html>
