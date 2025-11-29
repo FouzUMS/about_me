@@ -1,105 +1,65 @@
-/* GLOBAL EARTH TONES OVERRIDE */
-body {
-    background-color: #E8E4C9; /* Beige Background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: "Tahoma", sans-serif;
+/* * EARTH TONE PALETTE OVERRIDES 
+ * Base: Warm Beige. Primary: Olive Green. Text: Dark Espresso.
+ */
+ :root {
+    --pico-background-color: #fdfbf7; /* Milk/Beige */
+    --pico-color: #3e3c38;            /* Dark Brown/Grey text */
+    --pico-primary: #556b2f;          /* Olive Green */
+    --pico-primary-background: #556b2f;
+    --pico-primary-hover: #3b4d1e;
+    --pico-primary-underline: rgba(85, 107, 47, 0.5);
+    --pico-card-background-color: #f4f1ea; /* Slightly darker beige for cards */
+    --pico-border-radius: 0px; /* Sharp corners are trendy right now */
 }
 
-.desktop {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
+/* Typography & Layout Tweaks */
+h1, h2, h3 { 
+    font-weight: 700; 
+    color: #2c2a26; 
 }
 
-/* WINDOW STYLING */
-.window {
-    box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
-}
-
-/* Title Bar - Green */
-.title-bar {
-    background: linear-gradient(90deg, #556b2f, #8fbc8f); /* Dark Olive Green */
-}
-
-/* Window Body - Light Beige/Tan */
-.window-body {
-    background-color: #F5F5DC; 
-    min-height: 400px;
-}
-
-/* Tabs - Brown/Beige integration */
-menu[role="tablist"] {
-    margin-bottom: 10px;
-}
-
-/* Styling the Text Content */
-h3, h4 {
-    color: #3e2723; /* Dark Coffee Brown */
-    margin-bottom: 5px;
-}
-
-p, li {
-    color: #4a4a4a;
-    line-height: 1.5;
-}
-
-/* HEADSHOT */
-.profile-pic-frame {
-    border: 2px solid #8b4513;
-    padding: 3px;
-    width: 156px;
-    background: #fff;
-    margin-bottom: 15px;
+header { 
+    padding-bottom: 2rem; 
+    border-bottom: 1px solid #e0ded5; 
+    margin-bottom: 3rem; 
 }
 
 .headshot {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
     object-fit: cover;
-    display: block;
+    border-radius: 0; /* Minimalist sharp edges */
+    filter: grayscale(20%); /* Artistic touch */
 }
 
-/* PROJECT BOXES */
-fieldset {
-    border: 2px solid #8b4513; /* Brown border */
-    background: #fff8dc; /* Cornsilk */
-    margin-bottom: 15px;
+/* Carousel Styling */
+.carousel { 
+    display: flex; 
+    overflow-x: auto; 
+    gap: 1rem; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 1rem; 
 }
 
-legend {
-    background: #556b2f;
-    color: white;
-    padding: 2px 6px;
-    font-weight: bold;
+.carousel img { 
+    scroll-snap-align: center; 
+    max-height: 400px; 
+    border: 1px solid #dcdad0; 
 }
 
-/* CAROUSEL */
-.carousel-container {
-    text-align: center;
-    background: #333;
-    padding: 10px;
-    border: 2px inset #fff;
+/* Utility */
+.muted { 
+    color: #8c8b85; 
+    font-size: 0.9em; 
 }
 
-.carousel-slide img {
-    max-width: 100%;
-    border: 1px solid #fff;
+nav ul li a { 
+    color: var(--pico-color); 
+    font-weight: 600; 
 }
 
-.carousel-slide p {
-    color: white;
-    margin-top: 5px;
-}
-
-.carousel-controls {
-    margin-top: 10px;
-}
-
-/* BUTTON OVERRIDES (To match Earth Tones) */
-button {
-    color: #3e2723;
+nav ul li a:hover { 
+    color: var(--pico-primary); 
+    text-decoration: none; 
 }
