@@ -3,141 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fouz | Portfolio</title>
+    <title>Fouz | Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav class="container">
+        <ul><li><strong>FOUZ UL MUBEEN</strong></li></ul>
         <ul>
-            <li><strong>FOUZ</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Work</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#photos">Visuals</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="index.html" class="contrast">About</a></li>
+            <li><a href="experience.html">Work</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="photos.html">Visuals</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 
     <main class="container">
-
-        <header id="about" class="grid">
+        <header class="grid">
             <div>
                 <hgroup>
                     <h1>Strategy. Governance. Alignment.</h1>
-                    <p>Final-year student at Telfer School of Management.</p>
+                    <p>Business Technology Management | University of Ottawa</p>
                 </hgroup>
-                <p>I focus on the rigorous intersection of IT governance and business strategy. My work bridges the gap between technical infrastructure and organizational goals, ensuring digital assets serve the bottom line.</p>
-                <button onclick="window.location.href='mailto:youremail@uottawa.ca'">Contact Me</button>
+                [cite_start]<p>I am a final-year student with a global perspective, having recently completed an exchange at <strong>Monash University</strong> in Melbourne[cite: 19]. My expertise lies in bridging the gap between complex data analytics and actionable business strategy.</p>
+                [cite_start]<p>Currently serving as an <strong>IT Business Analyst</strong> at the Department of National Defence[cite: 23, 25], I specialize in IT expenditures reporting, dashboard automation, and database design.</p>
+                <button onclick="window.location.href='mailto:fouz0060@gmail.com'">Get in Touch</button>
             </div>
             <div>
                 <img src="https://placehold.co/400x400/556b2f/FFF?text=Fouz" alt="Fouz Headshot" class="headshot">
             </div>
         </header>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            
-            <article>
-                <header>
-                    <strong>[Recent Role Title]</strong> <br> 
-                    <span class="muted">[Company Name] | [Date Range]</span>
-                </header>
-                <p>
-                    [SUMMARY PLACEHOLDER: Spearheaded the migration of legacy databases to cloud infrastructure, reducing maintenance overhead by 15%. Acted as the primary liaison between technical engineering teams and non-technical stakeholders.]
-                </p>
-            </article>
-
-            <article>
-                <header>
-                    <strong>[Previous Role Title]</strong> <br> 
-                    <span class="muted">[Company Name] | [Date Range]</span>
-                </header>
-                <p>
-                    [SUMMARY PLACEHOLDER: Conducted fiscal analysis for public sector funding requests. Developed a new governance framework that streamlined approval processes for departmental IT procurement.]
-                </p>
-            </article>
-        </section>
-
-        <section id="projects">
-            <h2>Selected Projects</h2>
+        <section>
+            <h2>Education & Skills</h2>
             <div class="grid">
-                
                 <article>
-                    <h5>Cloud Architecture & Trends</h5>
-                    <p class="muted">ADM4378 Capstone</p>
-                    <p>An in-depth analysis of backend technologies and market viability. I evaluated current serverless architectures to determine their cost-benefit ratio for mid-sized enterprises.</p>
+                    <h5>University of Ottawa</h5>
+                    [cite_start]<p class="muted">BCom, Business Technology Management (Co-op) [cite: 13]</p>
+                    <p>focused on Management Information Systems and Analytics. [cite_start]Expected completion: Dec 2025[cite: 16].</p>
                 </article>
-
                 <article>
-                    <h5>Public Sector Digital Strategy</h5>
-                    <p class="muted">Consulting Report</p>
-                    <p>Authored a strategic report for a federal institution. Assessed the alignment of their IT capabilities with their business mandate, identifying critical gaps in their digital maturity model.</p>
+                    <h5>Technical Stack</h5>
+                    <ul>
+                        [cite_start]<li><strong>Analytics:</strong> Power BI (DAX), Tableau, SPSS Modeler [cite: 10]</li>
+                        [cite_start]<li><strong>Database:</strong> SQL, MongoDB, Oracle, MySQL [cite: 11]</li>
+                        [cite_start]<li><strong>Web:</strong> HTML, CSS, PHP, JavaScript [cite: 59]</li>
+                    </ul>
                 </article>
-
-                <article>
-                    <h5>[Resume Project]</h5>
-                    <p class="muted">Academic/Personal</p>
-                    <p>Designed and executed a [Project Details]. Focused on scalability and user-centric design principles.</p>
-                </article>
-
             </div>
         </section>
-
-        <section id="photos">
-            <h2>Photography</h2>
-            <p>A study in light and composition.</p>
-            <div class="carousel">
-                <img src="https://placehold.co/600x400/3e3c38/FFF?text=Street" alt="Photo 1">
-                <img src="https://placehold.co/600x400/556b2f/FFF?text=Landscape" alt="Photo 2">
-                <img src="https://placehold.co/600x400/8c7b70/FFF?text=Portrait" alt="Photo 3">
-                <img src="https://placehold.co/600x400/dcdad0/333?text=Detail" alt="Photo 4">
-            </div>
-            <small class="muted">Swipe or scroll horizontally to view more.</small>
-        </section>
-
-        <section id="blog">
-            <h2>Field Notes</h2>
-            <p>Observations on tech, governance, and life.</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col">Date</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Topic</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Nov 28, 2025</td>
-                        <td><a href="#">The Fallacy of "Agile" in Government</a></td>
-                        <td>Governance</td>
-                    </tr>
-                    <tr>
-                        <td>Nov 15, 2025</td>
-                        <td><a href="#">Why I switched to Nikon for Video</a></td>
-                        <td>Photography</td>
-                    </tr>
-                    <tr>
-                        <td>Oct 30, 2025</td>
-                        <td><a href="#">Interesting Link: The End of Social Media?</a></td>
-                        <td>Curated</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
     </main>
-
-    <footer class="container">
-        <small class="muted">
-            © 2025 Fouz. Built with <a href="https://picocss.com" class="secondary">Pico</a>. 
-        </small>
-    </footer>
-
+    <footer class="container"><small class="muted">© 2025 Fouz Ul Mubeen</small></footer>
 </body>
 </html>
