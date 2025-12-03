@@ -150,3 +150,36 @@ nav ul li a:hover {
 .muted {
     color: var(--pico-muted-color);
 }
+
+/* 7. DARK MODE OVERRIDE (Forces Earth Tones in ALL System Modes) */
+/* * This media query tells the browser: "If the user has Dark Mode enabled, 
+ * use these specific LIGHT-THEME variables anyway."
+ * * We must use :root:root for maximum specificity to override Pico's defaults.
+ */
+ @media (prefers-color-scheme: dark) {
+    :root:root {
+        /* CORE COLOR VARIABLES REPEATED */
+        --pico-background-color: #fdfbf7;
+        --pico-color: #3e3c38; 
+        --pico-primary: #556b2f;          
+        --pico-primary-hover: #3b4d1e;
+        --pico-muted-color: #7d7a73;
+        
+        /* TECH ACCENTS REPEATED */
+        --code-bg: #eae7de;               
+        --border-color: #dcdad0;          
+        
+        /* PICO DARK MODE SPECIFIC OVERRIDES */
+        /* These variables are often the source of unwanted dark headers/footers */
+        --pico-nav-background-color: var(--pico-background-color); 
+        --pico-footer-background-color: var(--pico-background-color);
+        --pico-table-row-stripped-background-color: #f4f1ea; /* Light stripe color */
+        --pico-contrast-color: var(--pico-color);
+        --pico-contrast-background-color: var(--pico-background-color);
+    }
+    
+    /* Optional: Ensure text color stays dark against the light background */
+    body, h1, h2, h3, h4, nav ul li a {
+        color: var(--pico-color) !important;
+    }
+}
