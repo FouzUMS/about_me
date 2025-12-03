@@ -24,6 +24,12 @@
     /* Layout */
     --pico-border-radius: 0px;        /* Brutalist/Sharp aesthetic */
     --spacing-block: 2rem;
+
+    /* Specific overrides for common dark mode elements */
+    --pico-nav-background-color: var(--pico-background-color); 
+    --pico-h1-color: var(--pico-color);
+    --pico-h2-color: var(--pico-color);
+    --pico-h3-color: var(--pico-color);
 }
 
 /* 1. TYPOGRAPHY: STRATEGY & PRECISION */
